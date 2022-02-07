@@ -1,0 +1,132 @@
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.destaques {
+    display: grid;
+
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+
+    grid-gap: .3em;
+
+    height: calc(100vh - 50px);
+
+    padding: 0 .9em 0 0;
+    
+}
+
+.destaques__titulo {
+    width: 100%;
+
+    padding: .6rem;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    color: #fdfdfd;
+
+    text-align: center;
+
+    border-radius: 0 0 .2em .2em;
+}
+
+.destaques__principal {
+    background: url(../img/fortnite.jpg) center / cover no-repeat;
+
+    /*
+        background: url(../img/fortnite.jpg) center / cover no-repeat;
+
+        short hand para as propriedades
+
+        background-image: url(../img/fortnite.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    */
+
+    /*
+        quando informamos qual coluna o grid termina, tem que sempre colocar uma depois, se caso termine na coluna 2, colocar grid-column-end: 3; se caso termine na coluna 3, colocar grid-column-end: 4;
+
+        grid-column é o short hand para o grid-column-start e grid-column-end.
+
+        grid-column: 1 / 4; -- está dizendo que o container começa na coluna 1 e temina na coluna 3, tem sempre que colocar um a mais quando for colocar onde termina
+
+
+    */
+
+    grid-row: 1 / 3;
+
+
+    
+    /*
+        a mesma coisa vale para o grid-row-start e grid-row-end
+    */
+
+    border-radius: .2em;
+}
+
+.destaques__secundario:nth-child(2) {
+    background: url(../img/pubg.jpg) center / cover no-repeat;
+
+    border-radius: .2em;
+
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url(../img/slack.png) center / cover no-repeat;
+
+    border-radius: .2em;
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url(../img/whatsapp.png) center / cover no-repeat;
+
+    border-radius: .2em;
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url(../img/cs-go.jpg) center / cover no-repeat;
+
+    border-radius: .2em;
+}
+
+.destaques__categorias {
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    grid-gap: .1em;
+
+    height: 100%;
+}
+
+.destaques__categorias___item {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
+
+    width: 100%;
+
+    background: #cfcfcf;
+
+    border-left: 5px solid transparent;
+
+    color: #333333;
+
+    border-radius: .2em;
+}
+
+.destaques__categorias___link {
+    color: inherit;
+
+    /*
+        color: inherit; diz que irá herdar a cor do elemento pai
+    */
+}
